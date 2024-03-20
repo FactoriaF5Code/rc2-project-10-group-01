@@ -1,0 +1,31 @@
+.calendarContainer {
+    margin: 20px 100px;
+}
+
+.fc-v-event {
+    background-color: #623BFA;
+    border: 1px solid #623BFA;
+} 
+
+.fc-toolbar-title {
+    color: #623BFA;
+    font-weight: 300;
+}
+
+.fc-col-header-cell-cushion {
+    color: #623BFA;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.calendarContainer h1 {
+    color: #000000;
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-size: 22px;
+    margin: 40px 0px;
+}
+
+.fc-timegrid-axis-cushion {
+    font-size: 14px;
+}
