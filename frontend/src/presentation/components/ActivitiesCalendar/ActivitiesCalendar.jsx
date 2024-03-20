@@ -12,6 +12,7 @@ export const ActivitiesCalendar = () => {
   return (
     <>
       <div className="calendarContainer">
+        <h1>Calendario de actividades</h1>
         <FullCalendar
           plugins={[timeGridPlugin]}
           initialView="timeGridWeek"
@@ -25,11 +26,7 @@ export const ActivitiesCalendar = () => {
           }}
           timeZone="GMT+1"
           events={activities}
-          // events= {[
-          //   {title: 'The Title', // a property!
-          //     start: '2024-03-20T10:00:00.000Z', // a property!
-          //     end: '2024-03-20T11:00:00.000Z' // a property! ** see important note below about 'end' **
-          //   }]}
+          
         />
       </div>
     </>
