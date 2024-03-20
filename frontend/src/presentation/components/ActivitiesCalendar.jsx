@@ -9,7 +9,7 @@ export const ActivitiesCalendar = () => {
       initialView='timeGridWeek'
       locale= "esLocale"
       firstDay= {1}
-      themeSystem='Minty'
+      themeSystem='slate'
       headerToolbar={{
         left: 'prev,next',
         center: 'title',

@@ -1,0 +1,17 @@
+.modal{
+    width: 50%;
+    outline: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 60px;
+}
+
+.modal_ActivityInfo{
+    margin:80px;
+    width: 50%;
+}
+
+.modal_ActivityImg{
+
+}
