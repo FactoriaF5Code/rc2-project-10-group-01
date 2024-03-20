@@ -1,4 +1,6 @@
 import "./ActivitiesCalendar.css";
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -6,13 +8,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import activities from "../../../data/activities.json";
 
 export const ActivitiesCalendar = () => {
-  const theme = {
-    primaryButton: '#e87722',
-    headerBackground: '#e87722',
-    dayGridCellBackground: '#e87722',
-    eventBackgroundColor: '#e87722',
-  };
-  
+
   return (
     <>
       <div className="calendarContainer">
@@ -21,8 +17,7 @@ export const ActivitiesCalendar = () => {
           initialView="timeGridWeek"
           locale="esLocale"
           firstDay={1}
-          themeSystem='standard'
-          theme={theme}
+          themeSystem='bootstrap'
           headerToolbar={{
             left: "prev,next",
             center: "title",
