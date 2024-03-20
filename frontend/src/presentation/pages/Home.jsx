@@ -1,6 +1,8 @@
-
+import { ActivitiesCalendar } from "../components/ActivitiesCalendar"
 export const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <ActivitiesCalendar />
+    </>
   )
 }
