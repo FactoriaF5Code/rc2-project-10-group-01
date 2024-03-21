@@ -6,7 +6,12 @@
 .fc-v-event {
     background-color: #623BFA;
     border: 1px solid #623BFA;
+    cursor: pointer;
 } 
+
+.fc-v-event:hover {
+    background-color: #4126ae
+}
 
 .fc-toolbar-title {
     color: #623BFA;
@@ -29,4 +34,19 @@
 
 .fc-timegrid-axis-cushion {
     font-size: 14px;
+}
+
+@media only screen and (max-width: 700px) {
+    .fc .fc-toolbar-title {
+        font-size: 20px;
+    }
+    .fc-button-group button {
+        height: 30px;
+        width: 40px;
+        padding: 0;
+    }
+    .calendarContainer {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }

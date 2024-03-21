@@ -41,6 +41,7 @@ export const ActivitiesCalendar = () => {
           }}
           timeZone="GMT+1"
           events={activities}
+          contentWidth="auto"
           contentHeight="auto"
           allDaySlot= {false}
           eventClick={handleEventClick}

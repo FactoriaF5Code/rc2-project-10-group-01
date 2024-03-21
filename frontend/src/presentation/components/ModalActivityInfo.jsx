@@ -28,4 +28,3 @@ export const ModalActivityInfo = ({ onClose }) => {
     </section>
   )
 }
-

@@ -2,9 +2,12 @@
   background-color: white;
   height: 20vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.logoHeader {
+  flex: 1;
+  text-align: center;
 }
 
 a {
@@ -23,4 +26,33 @@ a {
   color: black;
   font-weight: 400;
   font-family: var(--main-font-family);
+}
+
+.backHomeButton {
+  background: none;
+  border: none;
+  margin-left: 15%;
+  position: absolute;
+}
+
+.backHomeButton img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.backHomeButton img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .titleRuralFit {
+    font-size: 40px;
+  }
+  .sloganBlack {
+    font-size: 15px; 
+  }
+  .backHomeButton {
+    display: none;
+  }
 }
