@@ -18,6 +18,8 @@ export const ActivitiesCalendar = () => {
           initialView="timeGridWeek"
           locale="esLocale"
           firstDay={1}
+          slotMinTime = "08:00:00"
+          slotMaxTime = "21:00:00"
           themeSystem='bootstrap'
           headerToolbar={{
             left: "prev,next",
