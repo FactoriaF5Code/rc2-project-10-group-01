@@ -28,7 +28,8 @@ export const ActivitiesCalendar = () => {
           }}
           timeZone="GMT+1"
           events={activities}
-          
+          slotHeight="60"
+          contentHeight="auto"
         />
       </div>
     </>
