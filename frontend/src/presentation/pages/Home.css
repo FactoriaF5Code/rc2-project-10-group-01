@@ -1,9 +1,13 @@
-.container {
+.containerHome {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    outline: 1px solid red;
   }
   
   .backgroundImageContainer {
@@ -11,13 +15,9 @@
     height: 70%;
     position: relative;
     overflow: hidden;
-  }
-  
-  .backgroundImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    background-image: url('../assets/Group 16.png');
+    background-repeat: no-repeat;
+}
   
   .logoContainer {
     position: absolute;
@@ -31,7 +31,7 @@
     width: 200px; 
     }
   
-  .tagline {
+  .slogan {
     margin-top: 10px;
     font-size: 18px;
     font-weight: 300;
@@ -50,6 +50,7 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 30px;
+    font-family: var(--main-font-family);
   }
   
   .buttonContainer {

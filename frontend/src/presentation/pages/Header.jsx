@@ -1,10 +1,13 @@
 import './Header.css'; 
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
     <div className="header">
-      <h1 className="title">Rural Fit</h1>
-      <p className="tagline">COSECHANDO CUERPO Y MENTE</p>
+      <Link to="/">
+        <h1 className="titleRuralFit">Rural Fit</h1>
+      </Link>
+      <p className="sloganBlack">COSECHANDO CUERPO Y MENTE</p>
     </div>
   );
 };
