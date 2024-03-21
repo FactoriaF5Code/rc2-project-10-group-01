@@ -1,4 +1,5 @@
-import './ModalActivity.css'
+import './ModalActivity.css';
+import closeButton from "../assets/closeButton.svg";
 
 
 export const ModalActivityInfo = () => {
@@ -21,7 +22,7 @@ export const ModalActivityInfo = () => {
             <img src="./carretilla.jpg" alt="Carretilla balance" />
         </div>
         <button className='modal_CloseButton'>
-          X
+          <img src={closeButton} alt="Cerrar" className="closeButton" />
         </button>
     </section>
   )
