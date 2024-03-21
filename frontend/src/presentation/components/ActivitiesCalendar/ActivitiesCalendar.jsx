@@ -30,6 +30,7 @@ export const ActivitiesCalendar = () => {
           events={activities}
           slotHeight="60"
           contentHeight="auto"
+          allDaySlot= {false}
         />
       </div>
     </>
