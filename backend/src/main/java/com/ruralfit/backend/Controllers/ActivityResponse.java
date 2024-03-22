@@ -1,16 +1,16 @@
 package com.ruralfit.backend.Controllers;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class ActivityResponse {
     private Integer id;
     private String name;
     private String description;
-    private Date start;
-    private Date end;
+    private Timestamp start;
+    private Timestamp end;
     private String trainer;
 
-    public ActivityResponse(Integer id, String name, String description, Date start, Date end, String trainer) {
+    public ActivityResponse(Integer id, String name, String description, Timestamp start, Timestamp end, String trainer) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -43,19 +43,19 @@ public class ActivityResponse {
         this.description = description;
     }
 
-    public Date getStart() {
+    public Timestamp getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(Timestamp start) {
         this.start = start;
     }
 
-    public Date getEnd() {
+    public Timestamp getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(Timestamp end) {
         this.end = end;
     }
 

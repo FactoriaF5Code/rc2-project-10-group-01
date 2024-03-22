@@ -13,35 +13,40 @@ export const ActivitiesCalendar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activities, setActivities] = useState([]);
 
+  function dateTransform(dateString) {
+    // Reemplazar el espacio por la 'T' y agregar los milisegundos y la Z al final
+    return dateString.replace(' ', 'T') + '.000Z';
+  }
+
   // Método GET de activities
   useEffect(() => {
-    fetchActivities();
-  }, []);
-
-  const fetchActivities = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/api/activities');
-      if (!response.ok) {
-        throw new Error('Error al obtener las actividades');
+    const fetchActivities = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/activities');
+        if (!response.ok) {
+          throw new Error('Error al obtener las actividades');
+        }
+        const data = await response.json();
+    
+        // Transformación de datos antes de establecer el estado
+        const transformedActivities = data.map(activity => ({
+          title: activity.name, // Asignar el nombre de la actividad al campo 'title'
+          start: dateTransform(activity.start),
+          end:  dateTransform(activity.end)
+        }));
+    
+        console.log('Actividades transformadas:', transformedActivities);
+  
+        setActivities(transformedActivities);
+      } catch (error) {
+        console.error('Error:', error);
       }
-      const data = await response.json();
+    };
   
-      // Transformación de datos antes de establecer el estado
-      const transformedActivities = data.map(activity => ({
-        title: activity.name, // Asignar el nombre de la actividad al campo 'title'
-        start: activity.start,
-        //2024-03-20 08:00:00
-        //2024-03-20T08:00:00.000Z
-        end:  activity.end
-      }));
+    fetchActivities();
+    
+  }, []);
   
-      console.log('Actividades transformadas:', transformedActivities);
-
-      setActivities(transformedActivities);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
   
 
   const handleEventClick = (info) => {
