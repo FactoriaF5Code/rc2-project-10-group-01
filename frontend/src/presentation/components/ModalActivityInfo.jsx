@@ -20,7 +20,7 @@ export const ModalActivityInfo = ({ onClose, title, description, start, trainer,
             </ul>
         </div>
         <div className='modal_ActivityImg'>
-            <img src={urlrural} alt="Carretilla balance" />
+            <img src="/carretilla.jpg" alt="Carretilla balance" />
         </div>
         <button className='modal_CloseButton' onClick={onClose}>
           <img src={closeButton} alt="Cerrar" className="closeButton" />

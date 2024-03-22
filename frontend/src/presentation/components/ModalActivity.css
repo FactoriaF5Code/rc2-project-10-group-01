@@ -45,10 +45,11 @@
     overflow: hidden;
     flex:1;
     height: 100%;
+    /* max-width: 480px; */
 }
 
 .modal_ActivityImg img {
-    object-fit: contain;
+    object-fit: content;
     max-width: 480px;
 }
 
