@@ -1,3 +1,12 @@
+CREATE TABLE activities (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    start TIMESTAMP WITHOUT TIME ZONE,
+    "end" TIMESTAMP WITHOUT TIME ZONE,
+    trainer VARCHAR(255)
+);
+
 INSERT INTO activities (id, name, description, start, "end", trainer)
 VALUES
     (1, 'Pita crossfit', 'Entrenamiento de alta intensidad. Intenta atrapar el mayor número de pitas posibles en una hora. Un ejercicio extremo solo apto para deportistas de alto nivel.', '2024-03-20 08:00:00', '2024-03-20 09:00:00', 'Juan Pérez'),
