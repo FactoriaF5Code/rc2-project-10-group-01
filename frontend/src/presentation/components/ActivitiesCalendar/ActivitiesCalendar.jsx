@@ -30,10 +30,13 @@ export const ActivitiesCalendar = () => {
         // Transformación de datos antes de establecer el estado
         const transformedActivities = data.map(activity => ({
           title: activity.name,
-          description: activity.description,
+          extendedProps: {
+            description: activity.description,
+            trainer: activity.trainer,
+            urlrural:activity.urlrural
+          },
           start: dateTransform(activity.start),
           end: dateTransform(activity.end),
-          trainer: activity.trainer
         }));
     
         console.log('Actividades transformadas:', transformedActivities);
@@ -87,9 +90,10 @@ export const ActivitiesCalendar = () => {
         <ModalActivityInfo
         onClose={closeModal}
         title={selectedEvent.title}
-        start={selectedEvent.start}
         description={selectedEvent.description}
+        start={selectedEvent.start}
         trainer={selectedEvent.trainer}
+        urlrural={selectedEvent.urlrural}
         />
       )}
     </>

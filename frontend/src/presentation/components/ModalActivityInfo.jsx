@@ -3,7 +3,7 @@ import closeButton from "../assets/closeButton.svg";
 
 
 // eslint-disable-next-line react/prop-types
-export const ModalActivityInfo = ({ onClose, title, start, description, trainer }) => {
+export const ModalActivityInfo = ({ onClose, title, description, start, trainer, urlrural }) => {
   return (
     <section className="modal">
         <div className='modal_ActivityInfo'>
@@ -20,7 +20,7 @@ export const ModalActivityInfo = ({ onClose, title, start, description, trainer 
             </ul>
         </div>
         <div className='modal_ActivityImg'>
-            <img src="./carretilla.jpg" alt="Carretilla balance" />
+            <img src={urlrural} alt="Carretilla balance" />
         </div>
         <button className='modal_CloseButton' onClick={onClose}>
           <img src={closeButton} alt="Cerrar" className="closeButton" />
