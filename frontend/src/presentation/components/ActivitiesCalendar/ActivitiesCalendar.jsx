@@ -1,16 +1,48 @@
 import "./ActivitiesCalendar.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import { ModalActivityInfo } from "../ModalActivityInfo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 
-import activities from "../../../data/activities.json";
+// import activities from "../../../data/activities.json";
 
 export const ActivitiesCalendar = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activities, setActivities] = useState([]);
+
+  // Método GET de activities
+  useEffect(() => {
+    fetchActivities();
+  }, []);
+
+  const fetchActivities = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/activities');
+      if (!response.ok) {
+        throw new Error('Error al obtener las actividades');
+      }
+      const data = await response.json();
+  
+      // Transformación de datos antes de establecer el estado
+      const transformedActivities = data.map(activity => ({
+        title: activity.name, // Asignar el nombre de la actividad al campo 'title'
+        start: activity.start,
+        //2024-03-20 08:00:00
+        //2024-03-20T08:00:00.000Z
+        end:  activity.end
+      }));
+  
+      console.log('Actividades transformadas:', transformedActivities);
+
+      setActivities(transformedActivities);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  
 
   const handleEventClick = (info) => {
     setSelectedEvent(info.event);
