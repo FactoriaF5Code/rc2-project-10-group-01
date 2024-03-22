@@ -74,3 +74,6 @@ WHERE id = 11;
 UPDATE activities
 SET url = 'https://d2yoo3qu6vrk5d.cloudfront.net/images/20170317040221/gettyimages-119293755-914x607.jpg?itok=1489747190'
 WHERE id = 12;
+
+
+ALTER TABLE activities RENAME COLUMN url TO urlrural;
