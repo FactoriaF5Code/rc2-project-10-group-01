@@ -22,13 +22,16 @@ public class Activity {
     private Timestamp start;
     private Timestamp end;
     private String trainer;
+    private String url;
     
-    public Activity(String name, String description, Timestamp start, Timestamp end, String trainer) {
+
+    public Activity(String name, String description, Timestamp start, Timestamp end, String trainer, String url) {
         this.name = name;
         this.description = description;
         this.start = start;
         this.end = end;
         this.trainer = trainer;
+        this.url = url;
     }
     
     public Activity() {
@@ -81,6 +84,14 @@ public class Activity {
 
     public void setTrainer(String trainer) {
         this.trainer = trainer;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }

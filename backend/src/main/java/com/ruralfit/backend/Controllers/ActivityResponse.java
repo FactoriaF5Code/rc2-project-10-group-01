@@ -9,14 +9,17 @@ public class ActivityResponse {
     private Timestamp start;
     private Timestamp end;
     private String trainer;
+    private String url;
 
-    public ActivityResponse(Integer id, String name, String description, Timestamp start, Timestamp end, String trainer) {
+
+    public ActivityResponse(Integer id, String name, String description, Timestamp start, Timestamp end, String trainer, String url) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.start = start;
         this.end = end;
         this.trainer = trainer;
+        this.url = url;
     }
 
     public Integer getId() {
@@ -65,6 +68,14 @@ public class ActivityResponse {
 
     public void setTrainer(String trainer) {
         this.trainer = trainer;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     

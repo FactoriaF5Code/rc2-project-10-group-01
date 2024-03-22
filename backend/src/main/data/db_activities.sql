@@ -21,3 +21,56 @@ VALUES
     (10, 'Pita crossfit', 'Entrenamiento de alta intensidad. Intenta atrapar el mayor número de pitas posibles en una hora. Un ejercicio extremo solo apto para deportistas de alto nivel.', '2024-03-22 17:00:00', '2024-03-22 18:00:00', 'Javier Ruiz'),
     (11, 'Pig pump', 'Entrenamiento de alta intensidad. Mide tu resistencia con un auténtico gochu asturcelta.', '2024-03-18 18:00:00', '2024-03-18 19:00:00', 'Marina López'),
     (12, 'Zzzzzumba', 'Clase de baile y ejercicio aeróbico. ¿Pensabas que bailar era divertido? Espera a hacerlo esquivando abejas.', '2024-03-21 19:00:00', '2024-03-21 20:00:00', 'Roberto García');
+
+
+ALTER TABLE activities
+ADD COLUMN url VARCHAR(255);
+
+
+UPDATE activities
+SET url = 'https://wl-genial.cf.tsp.li/resize/728x/jpg/608/2a6/0605a8559e8e3eef7bd50598b8.jpg'
+WHERE id = 1;
+
+UPDATE activities
+SET url = 'https://www.canalextremadura.es/sites/default/files/Media/Images/2020-10/GeneracionD_181020_RURALGYM.jpg'
+WHERE id = 2;
+
+UPDATE activities
+SET url = 'https://static.vecteezy.com/system/resources/previews/024/522/291/large_2x/pig-with-barbell-is-standing-on-a-barbell-ai-generated-free-photo.jpg'
+WHERE id = 3;
+
+UPDATE activities
+SET url = 'https://d2yoo3qu6vrk5d.cloudfront.net/images/20170317040221/gettyimages-119293755-914x607.jpg?itok=1489747190'
+WHERE id = 4;
+
+UPDATE activities
+SET url = 'https://www.muchoneumatico.com/blog/wp-content/uploads/2022/04/mature-asian-farmer-with-wheelbarrow.jpg'
+WHERE id = 5;
+
+UPDATE activities
+SET url = 'https://static.vecteezy.com/system/resources/previews/024/522/291/large_2x/pig-with-barbell-is-standing-on-a-barbell-ai-generated-free-photo.jpg'
+WHERE id = 6;
+
+UPDATE activities
+SET url = 'https://www.canalextremadura.es/sites/default/files/Media/Images/2020-10/GeneracionD_181020_RURALGYM.jpg'
+WHERE id = 7;
+
+UPDATE activities
+SET url = 'https://www.muchoneumatico.com/blog/wp-content/uploads/2022/04/mature-asian-farmer-with-wheelbarrow.jpg'
+WHERE id = 8;
+
+UPDATE activities
+SET url = 'https://d2yoo3qu6vrk5d.cloudfront.net/images/20170317040221/gettyimages-119293755-914x607.jpg?itok=1489747190'
+WHERE id = 9;
+
+UPDATE activities
+SET url = 'https://wl-genial.cf.tsp.li/resize/728x/jpg/608/2a6/0605a8559e8e3eef7bd50598b8.jpg'
+WHERE id = 10;
+
+UPDATE activities
+SET url = 'https://static.vecteezy.com/system/resources/previews/024/522/291/large_2x/pig-with-barbell-is-standing-on-a-barbell-ai-generated-free-photo.jpg'
+WHERE id = 11;
+
+UPDATE activities
+SET url = 'https://d2yoo3qu6vrk5d.cloudfront.net/images/20170317040221/gettyimages-119293755-914x607.jpg?itok=1489747190'
+WHERE id = 12;
