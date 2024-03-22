@@ -14,8 +14,7 @@ export const ActivitiesCalendar = () => {
   const [activities, setActivities] = useState([]);
 
   function dateTransform(dateString) {
-    // Reemplazar el espacio por la 'T' y agregar los milisegundos y la Z al final
-    return dateString.replace(' ', 'T') + '.000Z';
+    return dateString.replace(/\+.*$|$/, 'Z');
   }
 
   // Método GET de activities
@@ -30,9 +29,9 @@ export const ActivitiesCalendar = () => {
     
         // Transformación de datos antes de establecer el estado
         const transformedActivities = data.map(activity => ({
-          title: activity.name, // Asignar el nombre de la actividad al campo 'title'
+          title: activity.name,
           start: dateTransform(activity.start),
-          end:  dateTransform(activity.end)
+          end: dateTransform(activity.end)
         }));
     
         console.log('Actividades transformadas:', transformedActivities);
