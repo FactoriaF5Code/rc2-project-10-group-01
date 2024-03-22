@@ -28,7 +28,7 @@ public class ActivityController {
         List<ActivityResponse> activities = new ArrayList<ActivityResponse>();
         List<Activity> activitiesInDataBaseActivities = repository.findAll();
         for (Activity activity : activitiesInDataBaseActivities) {
-            activities.add(new ActivityResponse(activity.getIdActivity(), activity.getName(), activity.getDescription(), activity.getDate(), activity.getTime(), activity.getTrainer()));
+            activities.add(new ActivityResponse(activity.getId(), activity.getName(), activity.getDescription(), activity.getStart(), activity.getEnd(), activity.getTrainer()));
         }
         return activities;
     }
@@ -38,7 +38,7 @@ public class ActivityController {
         Optional<Activity> optionalActivity = repository.findById(idActivity);
         if (optionalActivity.isPresent()) {
             Activity activity = optionalActivity.get();
-            ActivityResponse response = (new ActivityResponse(activity.getIdActivity(), activity.getName(), activity.getDescription(), activity.getDate(), activity.getTime(), activity.getTrainer()));
+            ActivityResponse response = (new ActivityResponse(activity.getId(), activity.getName(), activity.getDescription(), activity.getStart(), activity.getEnd(), activity.getTrainer()));
             return ResponseEntity.ok().body(response);
         } else {
             return ResponseEntity.notFound().build();

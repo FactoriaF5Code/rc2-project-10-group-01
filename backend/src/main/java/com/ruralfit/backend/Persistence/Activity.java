@@ -1,7 +1,6 @@
 package com.ruralfit.backend.Persistence;
 
 import java.sql.Date;
-import java.sql.Time;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,68 +9,68 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="books")
+@Table(name="activities")
 public class Activity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idActivity;
+    private Integer id;
     private String name;
     private String description;
-    private Date date;
-    private Time time;
+    private Date start;
+    private Date end;
     private String trainer;
-
-    public Activity(String name, String description, Date date, Time time, String trainer) {
+    
+    public Activity(String name, String description, Date start, Date end, String trainer) {
         this.name = name;
         this.description = description;
-        this.date = date;
-        this.time = time;
+        this.start = start;
+        this.end = end;
         this.trainer = trainer;
     }
-
+    
     public Activity() {
-
+        
     }
-
-    public Integer getIdActivity() {
-        return idActivity;
+    
+    public Integer getId() {
+        return id;
     }
-
-    public void setIdActivities(Integer idActivity) {
-        this.idActivity = idActivity;
+    
+    public void setId(Integer id) {
+        this.id = id;
     }
-
+    
     public String getName() {
         return name;
     }
-
+    
     public void setName(String name) {
         this.name = name;
     }
-
+    
     public String getDescription() {
         return description;
     }
-
+    
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public Date getDate() {
-        return date;
+    
+    public Date getStart() {
+        return start;
+    }
+    
+    public void setStart(Date start) {
+        this.start = start;
+    }
+    
+    public Date getEnd() {
+        return end;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Time getTime() {
-        return time;
-    }
-
-    public void setTime(Time time) {
-        this.time = time;
+    public void setEnd(Date end) {
+        this.end = end;
     }
 
     public String getTrainer() {
