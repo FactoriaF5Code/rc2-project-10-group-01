@@ -30,8 +30,10 @@ export const ActivitiesCalendar = () => {
         // Transformación de datos antes de establecer el estado
         const transformedActivities = data.map(activity => ({
           title: activity.name,
+          description: activity.description,
           start: dateTransform(activity.start),
-          end: dateTransform(activity.end)
+          end: dateTransform(activity.end),
+          trainer: activity.trainer
         }));
     
         console.log('Actividades transformadas:', transformedActivities);
@@ -46,8 +48,6 @@ export const ActivitiesCalendar = () => {
     
   }, []);
   
-  
-
   const handleEventClick = (info) => {
     setSelectedEvent(info.event);
     setIsModalOpen(true);
@@ -83,10 +83,13 @@ export const ActivitiesCalendar = () => {
           eventClick={handleEventClick}
         />
       </div>
-      {isModalOpen && (
+      {isModalOpen && selectedEvent && (
         <ModalActivityInfo
-          event={selectedEvent}
-          onClose={closeModal}
+        onClose={closeModal}
+        title={selectedEvent.title}
+        start={selectedEvent.start}
+        description={selectedEvent.description}
+        trainer={selectedEvent.trainer}
         />
       )}
     </>
